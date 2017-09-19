@@ -40,7 +40,8 @@ public class MyThreadPrinter2 implements Runnable {
     public static void main(String[] args) throws Exception {   
         Object a = new Object();   
         Object b = new Object();   
-        Object c = new Object();   
+        Object c = new Object();
+        c.wait();
         MyThreadPrinter2 pa = new MyThreadPrinter2("A", c, a);   
         MyThreadPrinter2 pb = new MyThreadPrinter2("B", a, b);   
         MyThreadPrinter2 pc = new MyThreadPrinter2("C", b, c);   
